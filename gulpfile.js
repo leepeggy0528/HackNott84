@@ -98,8 +98,6 @@ function watchsass() {
     watch(['./src/sass/*.scss', './src/sass/**/*.scss'], sassstyle); // ** 第二層路徑
     watch(['src/*.html', 'src/layout/*.html'], includeHTML); // ** 第二層路徑
     watch('src/js/*.js', ugjs); // ** 第二層路徑
-    watch('src/php/*.php', php); // ** 第二層路徑
-    watch('src/php/main/*.php', movephp); // ** 第二層路徑
 }
 
 exports.w = watchsass;
@@ -139,4 +137,4 @@ function clear() {
 exports.clearall = clear;
 
 //上線打包
-exports.packages = series(clear, parallel(includeHTML, sassstyle, ugjs, php , movephp), imgmin ,moveimg);
+exports.packages = series(clear, parallel(includeHTML, sassstyle, ugjs), imgmin ,moveimg);
