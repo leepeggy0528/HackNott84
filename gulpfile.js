@@ -93,27 +93,6 @@ function ugjs() {
 
 exports.ug = ugjs
 
-//php
-function php(){
-    return src('src/php/*.php')
-    .pipe(fileinclude({
-        prefix: '@@',
-        basepath: '@file'
-    }))
-    .pipe(dest('dist/php'));
-}
-
-exports.php = php
-
-function movephp() {
-    return src('src/php/main/*.php')
-    .pipe(fileinclude({
-        prefix: '@@',
-        basepath: '@file'
-    }))
-    .pipe(dest('dist'));
-}
-exports.mphp = movephp;
 //監看
 function watchsass() {
     watch(['./src/sass/*.scss', './src/sass/**/*.scss'], sassstyle); // ** 第二層路徑
