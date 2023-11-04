@@ -1,0 +1,257 @@
+*{
+    margin:0;
+    padding:0;
+    
+   }
+  
+   body{
+    font-family:'Roboto',sans-serif;
+     overflow-x:hidden;
+   }
+  
+   header{
+     display: flex;
+     background-color: #FFF3A9;
+     justify-content: space-around;
+   }
+  
+   nav{
+   display:flex;
+   color:#025A78;
+   align-items: center;
+   }
+  
+   nav.logo{
+   letter-spacing: 3px;
+   }
+   nav ul{
+   display:flex;
+   list-style: none;
+   margin: 0 20px;
+   }
+  
+   nav ul li{
+     margin: 0 20px;
+   }
+   nav ul li a {
+     color:#025A78;
+     text-decoration: none;
+     font-size: 1em;
+   }
+   
+   .btn{
+   border-radius: 40px;
+   }
+   /*Hamburger */
+   .menu-bars{
+   display:none;
+   flex-direction: column;
+   height:20px;
+   justify-content: space-between;
+   position:relative;
+     z-index:999;
+   }
+   .menu-bars input{
+   position: absolute;
+   width:40px;
+   height:28px;
+   left:-5px;
+   top:-3px;
+   opacity: 0;
+   cursor:pointer;
+   z-index: 2;
+   }
+   
+   .menu-bars span{
+   display:block;
+   width:28px;
+   height:3px;
+   background-color:#025A78;
+   border-radius: 3px;
+   transition: all 0.3s;
+   }
+   
+   .menu-bars span:nth-child(2){
+   transform-origin: 0 0 ;
+   }
+   
+   .menu-bars span:nth-child(4){
+     transform-origin: 0 100% ;
+     }
+   
+   .menu-bars input:checked ~ span:nth-child(2){
+   background-color: #025A78;
+   transform: rotate(45deg) translate(-1px, -1px);
+   }
+   .menu-bars input:checked ~ span:nth-child(4){
+     background-color: #025A78;
+     transform: rotate(-45deg) translate(-1px,0); 
+     }
+   
+     .menu-bars input:checked ~ span:nth-child(3){
+       opacity: 0;
+       transform: scale(0); 
+       }
+   
+       .insta-i{
+           display: none;
+       }
+  
+       .insta-buttom-i{
+            width: 100px;
+            border-radius: 100px;
+            background-color: #025A78;
+            color: #fff;
+            padding: 10px;
+            border: none;
+          
+       }
+  
+       .insta-buttom-i-2{
+        width: 100px;
+        border-radius: 100px;
+        background-color: #F9F3D1;
+        color: #025A78;
+        padding: 10px;
+        border: none;
+        
+   }
+   //登入過後
+  .afterLogin{
+    display: none;
+    align-items: center;
+    border-radius: 100px;
+    padding: 5px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .showMem{
+    display: flex;
+  }
+  .loginmempic{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .loginmempic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
+   .usernameLogin{
+     font-size: 18px;
+     color:#025A78;
+     font-weight: bold;
+     padding-right:12px;
+    }
+    .fa-sort-down{
+      font-size: 18px;
+      color: #E6D88A;
+    }
+    .memMenu{
+      position: relative;
+      margin-left: 5px;
+    }
+    .smallMemInfo{
+     background-color: #fff;
+     position: absolute;
+     top: 45px;
+     right: 0;
+     padding: 20px 10px 0 10px;
+     font-size: 18px;
+     border-radius: 10px;
+     display: none;
+     z-index: 100;
+     box-shadow: 0 0 5px #f0ecec;
+    }
+    .purseForHeader{
+     display: flex;
+     width: 125px;
+     align-items: center;
+     margin-left: 10px;
+     font-size: 13px;
+   }
+   .diamond img,.coin img{
+     width: 20px;
+   }
+   .diamond span,.coin span{
+     line-height: 20px;
+   }
+   .coin{
+     margin-left: 10px;
+   }
+   .memLink{
+    display: flex;
+   }
+   .memLink img{
+     width: 40px;
+   }
+   .memLink span{
+     line-height: 2.6em;
+   }
+   #LogoutButton{
+     border: none;
+     background-color: transparent;
+     color: $mainBlue;
+     font-size: $font-3;
+     cursor: pointer;
+   }
+   .memfile{
+     margin-top: 10px;
+   }
+   .openInfo{
+     display: block;
+   }
+   @media only screen and (max-width: 767px){
+    #afterLogin{
+      display: none;
+    }
+   
+   button{
+       display: none;
+   }
+   .insta-i{
+       display: block;
+   }
+  
+  
+   .menu-bars{
+    display:flex;
+    margin-left: 30px;
+    }
+  
+    nav ul{
+    position:absolute;
+    right:0;
+    top:0;
+    width:100%;
+    height:100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF3A9;
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: all 1.5s;
+    opacity: 0.9;
+    }
+  
+    
+    nav ul.slide{
+      transform: translate(18px,0);
+    }
+    
+    .usernameLogin{
+      display: none;
+    }
+    #loginForPhone{
+      display: block;
+      color: #025A78;
+      background-color: transparent;
+      border: none;
+      font-size: 1em;
+    }
+  }

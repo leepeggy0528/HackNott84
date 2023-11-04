@@ -1,7 +1,7 @@
 @import 'base/reset';
 @import 'base/var';
-//@import 'layout/footer';
-//@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/header';
 @import 'mixin/mixin';
 @import 'module/btn';
 @import 'module/circle';
@@ -11,7 +11,7 @@
 @import 'base/grid';
 
 // Variable overrides first
-$primary: #900;
+$primary: rgb(89, 187, 192);
 $enable-shadows: true;
 $prefix: "mo-";
 
