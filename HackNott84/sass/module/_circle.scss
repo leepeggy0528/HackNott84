@@ -1,0 +1,28 @@
+.smCircle {
+
+
+
+    .circle {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+}
+
+.mdCircle {
+    width: $mdCircle;
+
+    .circle {
+        border-radius: 50%;
+    }
+}
+
+
+.lgCircle {
+    width: $lgCircle;
+
+    .circle {
+        border-radius: 50%;
+    }
+}

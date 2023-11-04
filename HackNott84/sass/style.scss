@@ -1,0 +1,76 @@
+@import 'base/reset';
+@import 'base/var';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'mixin/mixin';
+@import 'module/btn';
+@import 'module/circle';
+@import 'module/input';
+@import 'module/card';
+@import 'layout/login';
+@import 'base/grid';
+
+
+.container {
+    max-width: $layoutwidth;
+    @include center();
+}
+
+h1 {
+    font-size: $h1;
+    padding: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: $h2;
+    padding: 15px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: $h3;
+    padding: 10px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: $h4;
+    padding: 10px;
+
+}
+
+p {
+    font-size: $p;
+    color: $textBlack;
+    line-height: $p * 1.5;
+    text-align: justify;
+    padding: 10px;
+}
+
+
+.tag {
+    font-size: $tag;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+
+}
+
+a {
+    text-decoration: none;
+    color: $mainBlue;
+
+
+    &:hover {
+        color: $linkBlue;
+        cursor: pointer;
+    }
+}
+
+.circle {
+    border-radius: 50%;
+}
