@@ -3,75 +3,20 @@
 <script src="./js/jquery-3.6.0.min.js"></script>
 <header>
 
-  <div class="logo">
-    <a href="front_page.html"><img src="./images/logo.png" alt="" width="150px" height="75px"></a>
-  </div>
+  <!--<div class="logo">
+    <a href="front_page.html">HackNott'84</a>
+  </div>-->
 
 
-  <nav>
+  <nav id="navbar-example2" class="px-3 mb-3">
+    <a href="#">HackNott'84</a>
     <ul>
-      <li><a href="group.php">揪團趣</a></li>
-      <li><a href="attractions.php">旅行趣</a></li>
-      <li><a href="discussion-2.php">討論趣</a></li>
-      <li><a href="hotleader_page.html">最HOT團主</a></li>
-      <li><a href="customized-card.php">客製卡片</a></li>
-      <li class="insta-i"><a href="holdparty_page.html">立即開團</a></li>
-
-      <li class="insta-i">
-        <button id="loginForPhone" href="./login.html">登入</button>
+      <li>
+        <a href="#member">Member</a>
+      </li>
+      <li>
+        <a href="#project">Projects</a>
       </li>
     </ul>
-    
-    <div class="insta-buttom">
-      <a href="holdparty_page.html"><button class="insta-buttom-i">立即開團</button></a>
-      <button Id="LoginBTN" class="insta-buttom-i-2">登入/註冊</button>
-    </div>
-    <!-- 登入過後 -->
-    <div class="memMenu">
-      <button class="afterLogin">
-        <div class="loginmempic">
-          <img src="./images/user/m01.jpg"  alt="">
-        </div>
-        <span class="usernameLogin"></span>
-        <i class="fas fa-sort-down"></i>
-      </button>
-      <div class="smallMemInfo">
-        <div class="purseForHeader">
-          <div class="diamond">
-            <img src="./images/icon/diamond1.png" alt="">
-            <span class="diamonds"></span>
-          </div>
-          <div class="coin">
-            <img src="./images/icon/coin1.png" alt="">
-            <span class="coins"></span>
-          </div>
-        </div>
-        <a class="memLink memfile" href="profileSelf.php">
-          <img src="./images/icon/Group 478.svg" alt="">
-          <span>個人檔案</span>
-        </a>
-        <button class="memLink" id="LogoutButton">
-          <img src="./images/icon/Group 477.svg" alt="">
-          <span>登出</span>
-        </button>
-      </div>
-    </div>
-    <div class="menu-bars" id="toggle">
-      <input type="checkbox">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
   </nav>
-
-  <script>
-    const menuToggle = document.querySelector(".menu-bars");
-    const nav = document.querySelector("nav ul");
-
-
-    menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("slide");
-    });
-  </script>
-  <script src="./js/friendtoggle.js"></script>
 </header>

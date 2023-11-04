@@ -1,3 +1,9 @@
+// Variable overrides first
+$primary: rgb(89, 187, 192);
+$enable-shadows: true;
+$prefix: "mo-";
+// Then import Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
 @import 'base/reset';
 @import 'base/var';
 @import 'layout/footer';
@@ -10,13 +16,9 @@
 //@import 'layout/login';
 @import 'base/grid';
 
-// Variable overrides first
-$primary: rgb(89, 187, 192);
-$enable-shadows: true;
-$prefix: "mo-";
 
-// Then import Bootstrap
-@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
 
 .container {
     max-width: $layoutwidth;
@@ -81,3 +83,4 @@ a {
 .circle {
     border-radius: 50%;
 }
+
