@@ -1,0 +1,53 @@
+<html lang="zh-hant-tw">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+   <meta name="description" content="">
+   <!--<link rel="icon" href="./logo.ico">-->
+   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+   
+   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <script type="py" src="./test.py" config="./cofig/pyscript.toml"></script>
+    <title>HackNott84</title>
+</head>
+<body>
+<script>
+let express = require('express')
+let {join}=require('path')
+let multer = require('multer')
+let fs = require('fs');
+
+let app = express();
+app.use(express.static(jion(__dirname,'public')))
+
+let creatFolder = function(folder){
+    try{
+        fs.accessSync(floder);
+    }catch(e){
+        fs.mkdirSync(folder);
+    }
+};
+let uploadFolder = './upload/';
+createFolder(uploadFolder);
+
+let storage = multer.diskStorage({
+    destination: function(req, file, cb){
+        cb(null, uploadFolder);
+    },
+    filename: function(req file, cb){
+        cb(null, file.originalname);
+
+    }
+})
+
+let upload = multer({storage: storage});
+
+app.post('/upload', upload.single('upload'),function(req,res,next){
+    res.send("success");
+    next();
+});
+</script>
+
+</body>

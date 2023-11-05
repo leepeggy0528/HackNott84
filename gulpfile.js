@@ -93,6 +93,17 @@ function ugjs() {
 
 exports.ug = ugjs
 
+//python
+function pyth() {
+    return src('src/*.py').pipe(dest('dist'))
+}
+exports.py = pyth
+
+function pycog() {
+    return src('src/cofig/*.toml').pipe(dest('dist/cofig'))
+}
+exports.pyg = pycog
+
 //監看
 function watchsass() {
     watch(['./src/sass/*.scss', './src/sass/**/*.scss'], sassstyle); // ** 第二層路徑
@@ -119,11 +130,12 @@ function browser(done) {
     watch(['src/*.html', 'src/layout/*.html'], includeHTML).on('change', reload); // ** 第二層路徑
     watch('src/js/*.js', ugjs).on('change', reload);
     watch(['src/images/*.*', 'src/images/**/*.*'], moveimg).on('change', reload);
-
+    watch('src/*.py', pyth).on('change', reload);
+    watch('src/cofig/*.toml', pycog).on('change', reload); // ** 第二層路徑
     done();
 }
 
-exports.default = series(parallel(includeHTML, sassstyle, ugjs, moveimg), browser);
+exports.default = series(parallel(includeHTML, sassstyle, ugjs, moveimg,pyth,pycog), browser);
 
 
 //清除舊檔案
@@ -137,4 +149,4 @@ function clear() {
 exports.clearall = clear;
 
 //上線打包
-exports.packages = series(clear, parallel(includeHTML, sassstyle, ugjs), imgmin ,moveimg);
+exports.packages = series(clear, parallel(includeHTML, sassstyle, ugjs), imgmin ,moveimg,pyth,pycog);

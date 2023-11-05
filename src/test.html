@@ -9,11 +9,21 @@
    
    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-
+    <script type="py" src="./test.py" config="./cofig/pyscript.toml"></script>
     <title>HackNott84</title>
 </head>
 <body>
-    <py-script>
+    <div>
+        <p id="player"> </p><p id="playerPoint"> </p>
+        <p id="dealer"></p><p id="dealerPoint"> </p>
+    </div>
+    <div>
+        <p class="winner"> </p>
+    </div>
+
+        <!--printMessage()-->
+
+    <!--<py-script>
         pip install -U pywebio
         from pywebio.input import *
         from pywebio.output import *
@@ -135,6 +145,6 @@
                     put_text('莊家勝利', "玩家:", sum(playerPoint), "莊家電腦:", sum(dealerPoint))
                 elif sum(playerPoint) == sum(dealerPoint):
                     put_text('和局', "玩家:", sum(playerPoint), "莊家電腦:", sum(dealerPoint))
-    </py-script>
+    </py-script>-->
 
 </body>
