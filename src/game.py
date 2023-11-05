@@ -11,11 +11,11 @@ clock = pygame.time.Clock()
 # 創建一個物件 對時間做出管理跟操控
 BLACK=(0,0,0)
 #載入圖片
-background_img=pygame.image.load(os.path.join("./images/black.png")).convert()        
+background_img=pygame.image.load(os.path.join("src/images","black.png")).convert()        
 # os.path代表python檔案的位置  convert 是可以將圖片轉換成python轉換得懂的
-player_img=pygame.image.load(os.path.join("./images/fluffy devil.png")).convert()
-rock_img=pygame.image.load(os.path.join("./images/fatty boy.png")).convert()
-bullet_img=pygame.image.load(os.path.join("./images/bullet.png")).convert()
+player_img=pygame.image.load(os.path.join("src/images","fluffy devil.png")).convert()
+rock_img=pygame.image.load(os.path.join("src/images","fatty boy.png")).convert()
+bullet_img=pygame.image.load(os.path.join("src/images","bullet.png")).convert()
 class Player (pygame.sprite.Sprite):   
     #Sprite可以用來創建東西，像是石頭、飛行船、子彈等等，用Player來繼承內建sprite的類別
     def __init__(self):
